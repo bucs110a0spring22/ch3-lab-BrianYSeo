@@ -30,33 +30,11 @@ michelangelo.goto(-100, 20)
 leonardo.goto(-100, -20)
 # Part B - complete part B here
 leonardo.down()
-for i in range(3):
-  leonardo.forward(25)
-  leonardo.right(120)
-leonardo.clear()
-
-leonardo.down()
-for i in range(4):
-  leonardo.forward(25)
-  leonardo.right(90)
-leonardo.clear()
-
-leonardo.down()
-for i in range(6):
-  leonardo.forward(25)
-  leonardo.right(60)
-leonardo.clear()
-
-leonardo.down()
-for i in range(9):
-  leonardo.forward(25)
-  leonardo.right(40)
-leonardo.clear()
-
-leonardo.down()
-for i in range(12):
-  leonardo.forward(25)
-  leonardo.right(30)
-leonardo.clear()
+sides=[3, 4, 6, 9, 12]
+for item in sides:
+  for i in range(item):
+   leonardo.forward(25)
+   leonardo.right(360/item)
+  leonardo.clear()
 
 window.exitonclick()
